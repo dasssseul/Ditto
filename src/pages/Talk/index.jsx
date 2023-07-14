@@ -23,7 +23,9 @@ const Talk = () => {
             </span>
           </div>
         </div>
-        <div className="talk-description">contents</div>
+        <div className="talk-description">
+          <div className="talk-contents-wrapper">contents</div>
+        </div>
         <div className="talk-input">
           <div className="input-wrapper">
             <input

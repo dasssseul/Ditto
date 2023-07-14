@@ -1,21 +1,13 @@
 .talk-contents {
   /* padding: 30px 80px; */
-  margin: 20px auto;
+  margin: 10px auto;
   width: 900px;
   background-color: white;
   border-radius: 20px;
-  height: 700px;
-  overflow: overlay;
-}
-
-.talk-contents::-webkit-scrollbar {
-  display: none;
 }
 
 .talk-header {
-  position: sticky;
-  top: 0;
-  padding: 25px 50px;
+  padding: 20px 50px;
   background-color: white;
   border-radius: 20px 20px 0 0;
   display: flex;
@@ -28,7 +20,7 @@
 .user-info {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 2px;
 }
 
 .user-description {
@@ -39,27 +31,35 @@
 .talk-description {
   background-color: rgba(128, 128, 128, 0.3);
   height: 600px;
+  overflow-y: auto;
+}
+
+.talk-contents-wrapper {
+  height: 800px;
+}
+
+.talk-description::-webkit-scrollbar {
+  display: none;
 }
 
 .talk-input {
-  position: sticky;
-  bottom: 0;
   background-color: white;
   padding: 10px 50px;
+  border-radius: 0 0 20px 20px;
 }
 
 .input-wrapper {
   display: flex;
   align-items: center;
-  height: 60px;
+  height: 50px;
   padding: 0 30px 0 20px;
   justify-content: space-between;
 }
 
 .input-wrapper > .input {
-  height: 60px;
+  height: 50px;
   width: 680px;
   outline: none;
   border: none;
-  font-size: 20px;
+  font-size: 18px;
 }
