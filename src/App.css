@@ -1,0 +1,12 @@
+.contents {
+  height: 100vh;
+  background-color: #061433;
+  padding: 30px 80px;
+  overflow: auto;
+}
+
+.layout {
+  height: 100%;
+  min-width: 1330px;
+  min-height: 750px;
+}
