@@ -1,0 +1,51 @@
+.menu-container {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  padding: 30px 80px;
+  height: 85px;
+  border-bottom: 1px solid whitesmoke;
+  background-color: #061433;
+}
+
+.logo {
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.active .gnb-menu {
+  background-color: rgba(128, 128, 128, 0.3);
+}
+
+.gnb-menus {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin: 0 auto;
+}
+
+.gnb-menu {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 30px;
+  width: 150px;
+  height: 45px;
+  font-size: 18px;
+  color: white;
+  background-color: inherit;
+}
+
+.gnb-menu:hover {
+  background-color: rgba(128, 128, 128, 0.3);
+}

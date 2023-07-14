@@ -3,6 +3,7 @@
   height: 100%;
   flex-direction: column;
   justify-content: space-around;
+  padding: 30px 80px;
 }
 
 .title-container {
