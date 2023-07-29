@@ -1,11 +1,29 @@
 .home-contents {
   padding: 30px 80px;
+  height: calc(100% - 58px);
+  position: relative;
+}
+
+.home-contents {
+  &::before {
+    content: '';
+    background: url(../../asset/예시1.gif);
+    background-size: cover;
+    opacity: 0.3;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+  }
 }
 
 .home-title {
+  position: relative;
   font-size: 34px;
   color: white;
   font-weight: bold;
+  margin: 20px 0;
 }
 
 .home-description {

@@ -1,11 +1,46 @@
 import Layout from 'layout';
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import './index.css';
 import { CgProfile } from 'react-icons/cg';
 import { BsSendCheckFill } from 'react-icons/bs';
+import axios from 'axios';
 
 const Talk = () => {
   const inputRef = useRef();
+
+  const [text, setText] = useState('');
+
+  const handleChangeText = (e) => {
+    setText(e.target.value);
+  };
+
+  const handleSubmitChat = async (e) => {
+    try {
+      const response = await axios.post(
+        'https://api.openai.com/v1/chat/completions',
+        {
+          model: 'gpt-4',
+          messages: [
+            {
+              role: 'system',
+              content: '안녕',
+            },
+          ],
+        },
+        {
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${process.env.REACT_APP_OPENAI_API_KEY}`,
+          },
+        }
+      );
+
+      console.log(response.data.choices[0].message.content);
+    } catch (error) {
+      console.error(error);
+      alert('Error occurred');
+    }
+  };
 
   useEffect(() => {
     inputRef.current.focus();
@@ -32,8 +67,10 @@ const Talk = () => {
               className="input"
               placeholder="Ditto와 이야기를 나눠보세요!"
               ref={inputRef}
+              onChange={handleChangeText}
+              value={text}
             />
-            <BsSendCheckFill size={30} />
+            <BsSendCheckFill size={30} onClick={handleSubmitChat} />
           </div>
         </div>
       </div>
